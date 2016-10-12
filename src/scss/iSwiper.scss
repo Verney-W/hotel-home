@@ -1,0 +1,25 @@
+.iSwiper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	//position: relative;
+	.iSwiper-wrap{
+		position:absolute;
+		height: 100%;
+		width: 400%;
+	}
+	.iSwiper-item{
+		float: left;
+		width: 33.33%;
+		//width: 25%;
+		min-height: 130px;
+		background-size: 100% 100%;
+		//background-size: cover;
+	}
+	/*.tst {
+		.transition :transform .3s ease-in-out;
+	};*/
+}

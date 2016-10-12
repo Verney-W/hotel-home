@@ -1,0 +1,282 @@
+//color set
+$baseColor: #24AEF2;
+$backColor: #f5f6f5;
+$borderColor: #f4f4f4;
+$fontColor: #333;
+$lightColor: #ccc;
+@mixin flex{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flexTo($c:1){
+	flex: 1;
+	-webkit-box-flex: $c;
+	-ms-flex: $c;
+}
+
+@mixin flexCenter{
+	/* Center slide text vertically */
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+@mixin left-arrow($w:10px, $h:10px, $color:$baseColor,$left:0,$top:0){
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		width: $w;
+		height:$h;
+		border: 1px solid #ffffff;
+		border-right-color: $color;
+		border-bottom-color: $color;
+		transform: rotate(135deg);
+		left: $left;
+		top: $top;
+	}
+
+}
+
+@mixin right-arrow($bColor:#fff,$w:10px, $h:10px, $color:$baseColor,$right:0,$top:0){
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		width: $w;
+		height:$h;
+		border: 1px solid #ffffff;
+		border-right-color: $color;
+		border-bottom-color: $color;
+		transform: rotate(-45deg);
+		right: $right;
+		top: $top;
+	}
+
+}
+
+@mixin up-arrow($bColor:#fff,$w:6px, $h:6px, $color: #999,$right:15px,$top:20px){
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		width: $w;
+		height:$h;
+		border: 1px solid #ffffff;
+		border-right-color: $color;
+		border-bottom-color: $color;
+		transform: rotate(-135deg);
+		right: $right;
+		top: $top;
+	}
+
+}
+
+@mixin circle($w:10px, $h:10px, $color:$baseColor,$left:0,$top:0){
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		width: $w;
+		height:$h;
+		background: $color;
+		transform: rotate(-45deg);
+		left: $left;
+		top: $top;
+		border-radius:50%;
+	}
+
+}
+
+@mixin plugin($bgColor:#fff){
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	background: $bgColor;
+	z-index: 9999;
+	-webkit-transition: transform .25s ease-in;
+	transition:  transform .25s ease-in;
+}
+
+
+//search button icon
+@mixin search-icon($color:#fff,$bg:$baseColor){
+	border-radius: 50%;
+	border: 2px solid $color;
+	background: $bg;
+	position: relative;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	margin-right: 5px;
+	&:after{
+		content: '';
+		position: absolute;
+		width: 6px;
+		height: 2px;
+		background: #fff;
+		right: -4px;
+		bottom: -2px;
+		transform: rotate(45deg);
+	}
+}
+
+
+//checkbox style
+@mixin checkbox(){
+	position: relative;
+	&:after{
+		content:'';
+		position: absolute;
+		/**/left: 50%;
+		top: 50%;
+		margin: -5px 0 0 -5px;
+		width: 10px;
+		height: 10px;
+		border: 2px solid $baseColor;
+	}
+	&:before{
+		content:'';
+		position: absolute;
+		width: 7px;
+		height: 3px;
+		border-left: 2px solid $baseColor;
+		border-bottom: 2px solid $baseColor;
+		transform: rotate(-45deg);
+		visibility: hidden;
+		left: 50%;
+		top: 50%;
+		margin: -2px 0 0 -2px;
+	}
+}
+
+//checked stylesheet
+@mixin checked(){
+	&:before{
+		visibility: visible;
+	}
+}
+
+%clearfix{
+	&:before,
+	&:after {
+		display: block; //zy
+		content: " "; // 1
+		height: 0; //zy
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+//border set
+%bb{border-bottom: 1px solid $borderColor}
+%bt{border-top: 1px solid $borderColor}
+%bl{border-left: 1px solid $borderColor}
+%b\r{border-right: 1px solid $borderColor}
+
+
+//common stylesheet
+body{
+	overflow: hidden;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.mask-layer{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	//bottom: 45px;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	//display: none;
+}
+.loading{
+display: none;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	left: 50%;
+	top: 50%;
+	margin: -35px 0 0 -35px;
+	animation: loading 1.4s infinite;
+	-webkit-animation: loading 1.4s infinite linear;
+	img{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+@-webkit-keyframes loading{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+.plugin{
+	@include plugin();
+}
+.plugin-hide{
+	-webkit-transform: translate3d(100%,0,0);
+	-moz-transform: translate3d(100%,0,0);
+	-ms-transform: translate3d(100%,0,0);
+	-o-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+}
+.plugin-active{
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.none{
+	display: none !important;
+}
+.clear{
+	@extend %clearfix;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	background: $backColor;
+	overflow: hidden;
+	position: relative;
+}
+.header{
+	height: 44px;
+	@extend %bb;
+	text-align: center;
+	line-height: 44px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	background: #ffffff;
+	.left-arrow{
+		@include left-arrow($left:1rem,$top:15px);
+		position: absolute;
+		width: 50px;
+		height: 44px;
+		left: 0;
+	}
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>betterwood-列表页</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="keywords" content="1409D WEB-DEV" />
+	<meta name="description" content="1409D on the way of learning WEB" />
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+	<div class="container" id="list">
+		<header class="header">
+			343间酒店
+			<em class="left-arrow"></em>
+		</header>
+		<div class="choose-date">
+			<span class="in-date">入住：8月18日</span>
+			<span class="out-date">离店：8月19日</span>
+			<span class="right-arrow">修改</span>
+		</div>
+		<div class="hotel-lists">
+			<!-- <div class="mask-layer"></div>
+			<div class="loading">
+				<img src="../img/loading.png" alt="">
+			</div> -->
+			<!-- <dl class="clear">
+				<dt><img src="../img/01.jpg" alt=""></dt>
+				<dd>
+					<p class="hotel-name">北京希尔顿大酒店</p>
+					<p class="hotel-range">
+						<span class="left">
+			 				<em>3.6分</em>
+							<span class="promotion orange">礼</span>
+							<span class="promotion blue">促</span>
+							<span class="promotion red">返</span>
+						</span>
+						<span class="right hotel-price">￥200&nbsp;&nbsp;<sub>起</sub></span>
+					</p>
+					<p class="hotel-star">
+						<span>三星级</span>
+					</p>
+					<p class="hotel-location">
+						<span class="left">海淀区</span>
+						<span class="right">0.8KM</span>
+					</p>
+				</dd>
+			</dl> -->
+		</div>
+		<div class="screen">
+			<div class="screen-wrapper" style="margin-left: ;">
+				<div class="screen-child distance">
+					<p>
+						<span>由远到近</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p>
+						<span>由近到远</span>
+						<span class="right checkbox"></span>
+					</p>
+				</div>
+
+				<div class="screen-child price">
+					<p prices="0">
+						<span class="no-limit">不限</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p prices="150">
+						<span>0-149</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p prices="150">
+						<span>149-249</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p prices="150">
+						<span>249-349</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p prices="350">
+						<span>350以上</span>
+						<span class="right checkbox"></span>
+					</p>
+				</div>
+				
+				<div class="screen-child brand">
+					<p name="0">
+						<span class="no-limit">不限</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p name="北京翠微酒店">
+						<span>北京翠微酒店</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p name="北京天安瑞安酒店">
+						<span>北京天安瑞安酒店</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p name="北京汉庭酒店">
+						<span>北京汉庭酒店</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p name="北京希尔顿酒店">
+						<span>北京希尔顿酒店</span>
+						<span class="right checkbox"></span>
+					</p>
+				</div>
+
+				<!-- <div class="screen-child brand">
+					<p>
+						<span class="no-limit">不限</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p>
+						<span>希尔顿</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p>
+						<span>汉庭酒店</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p>
+						<span>如家酒店</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p>
+						<span>七天酒店</span>
+						<span class="right checkbox"></span>
+					</p>
+				</div> -->
+
+
+				<div class="screen-child range">
+					<p stars="0">
+						<span class="no-limit">不限</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p stars="二星">
+						<span>二星级/经济型</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p stars="三星">
+						<span>三星级</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p stars="四星">
+						<span>四星级</span>
+						<span class="right checkbox"></span>
+					</p>
+					<p stars="五星">
+						<span>五星级</span>
+						<span class="right checkbox"></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<!-- <a href="#sort"  class="high">排序</a>
+			<a href="#price">价格</a>
+			<a href="#brand">品牌</a>
+			<a href="#star">星级</a> -->
+			<span>
+				排序<!-- <a href="#sort"></a> -->
+			</span>
+			<span>
+				价格<!-- <a href="#price"></a> -->
+			</span>
+			<span>
+				品牌<!-- <a href="#brand"></a> -->
+			</span>
+			<span>
+				星级<!-- <a href="#star"></a> -->
+			</span>
+		</footer>
+		
+	</div>
+<script src="../lib/require.js" data-main="../main"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="screen" type="hidden">
+			<div class="screen-wrapper">
+				<div class="screen-child" id="sort">
+					<ul>
+						<li>
+							<span class="text">
+								不限
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								由近到远
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								由远到近
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								信用排序
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								综合排序
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="screen-child" id="price">
+					<ul>
+						<li>
+							<span class="text">
+								不限
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								由高到低
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								由低到高
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								300-500
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								500-1000
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="screen-child" id="brand">
+					<ul>
+						<li>
+							<span class="text">
+								不限
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								希尔顿
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								瑞安
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								天安
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								国贸
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="screen-child" id="star">
+					<ul>
+						<li>
+							<span class="text">
+								不限
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								二星一下/经济型
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								三星
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								四星
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+						<li>
+							<span class="text">
+								五星
+							</span>
+							<span class="cbox">
+								<input type="radio" name="one">
+							</span>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div> -->
